@@ -1,5 +1,30 @@
 # AndroidControl
 
+> **非常抱歉，因为工作繁忙，有很长一段时间没有更新了。 有很多人加群也没有及时通过。。。在这里郑重的说声 抱歉！ 非常感谢大家的支持！**
+
+
+
+我打算重构此项目的代码，下面介绍原因：
+
+1. 去ADB化
+   1. ADB很容易被其他程序或者用户操作干扰，导致连接中断
+   2. Android的碎片化导致很多人不知道如何配置ADB环境
+   3. 性能较差
+2. 服务器准备使用python替代java
+   1. 一开始选择Java的原因是因为ddmlib，既然去adb了，那就不想使用java了
+   2. 编译方法很多，导致很多朋友不知道如何编译java
+   3. 脚本是趋势，尤其是python的跳一跳外挂更是掀起了一阵波澜
+
+
+
+当然，原先的版本保留，不更新了（随着时间的发展，本菜鸟觉得以前的设计确实脑残。。。）
+
+
+
+---
+
+
+
 **它可以仅仅使用浏览器控制一台或者多台安卓设备，不仅仅局限于手机，如平板、手表等都可以**
 
 **如果有问题或者建议，请加qq群: 1476686**
@@ -38,24 +63,9 @@ AndroidControl是一个使用java语言编写的服务器，它是连接电脑�
 ```shell
 ├── AndroidControl.jar
 ├── resources
-└── yeetor.properties
 ```
 
 **Step2:**
-
-修改`yeetor.properties`文件，并把同目录下的`resources`目录的绝对路径粘贴到这里
-
-```
-resource.root=请把resources目录的路径复制到这里
-```
-
-如我的电脑：
-
-```
-resource.root=/Users/harry/Documents/AndroidControl_Release
-```
-
-**Step3:**
 
 运行`AndroidControl.jar`。注意，请修改为你电脑中的实际路径
 
@@ -63,7 +73,7 @@ resource.root=/Users/harry/Documents/AndroidControl_Release
 java -jar AndroidControl.jar 
 ```
 
-**Step4:**
+**Step3:**
 
 插上你的手机，打开`USB调试模式`
 
